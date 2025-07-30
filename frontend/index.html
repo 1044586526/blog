@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哒哒 - Java开发工程师</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-avatar">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">哒哒</span>
+                    <span class="logo-subtitle">Java Developer</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="#media" class="nav-item">
+                    <i class="fas fa-share-alt"></i>
+                    <span>媒体</span>
+                </a>
+                <a href="#products" class="nav-item">
+                    <i class="fas fa-cube"></i>
+                    <span>产品</span>
+                </a>
+                <a href="#courses" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>小册</span>
+                </a>
+                <a href="#source" class="nav-item">
+                    <i class="fas fa-code-branch"></i>
+                    <span>源码</span>
+                </a>
+                <a href="#opensource" class="nav-item">
+                    <i class="fab fa-github"></i>
+                    <span>开源</span>
+                </a>
+                <a href="#articles" class="nav-item">
+                    <i class="fas fa-pen"></i>
+                    <span>文章</span>
+                </a>
+                <a href="#groups" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>群聊</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="#contact" class="nav-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>联系我</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='90' fill='url(%23grad1)'/%3E%3Ctext x='100' y='120' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E哒%3C/text%3E%3C/svg%3E" alt="Avatar">
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">你好，我是</span>
+                    <span class="title-name">哒哒</span>
+                </h1>
+                <p class="hero-subtitle">Java开发工程师 · 全栈开发者 · 技术分享者</p>
+                <p class="hero-description">
+                    专注于Java后端开发，熟悉Spring Boot、微服务架构、分布式系统设计。
+                    热爱技术分享，致力于用代码创造价值，用技术改变世界。
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="7">0</span>
+                        <span class="stat-label">年开发经验</span>
+                    </div>
+                    <div class="stat-divider">|</div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="20">0</span>
+                        <span class="stat-label">项目经验</span>
+                    </div>
+                    <div class="stat-divider">|</div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50000">0</span>
+                        <span class="stat-label">代码行数</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        <span>查看作品</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-comment"></i>
+                        <span>联系合作</span>
+                    </a>
+                </div>
+                
+                <div class="hero-skills">
+                    <div class="skill-tag">Java</div>
+                    <div class="skill-tag">Nginx</div>
+                    <div class="skill-tag">Docker</div>
+                    <div class="skill-tag">Spring Boot</div>
+                    <div class="skill-tag">各种中间件</div>
+                    <div class="skill-tag">微服务</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>向下滚动</span>
+        </div>
+    </section>
+
+    <!-- 媒体平台 -->
+    <section id="media" class="media-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">我的媒体平台</h2>
+                <p class="section-subtitle">在各大平台分享技术知识，传播编程文化</p>
+            </div>
+            
+            <div class="media-grid collapsed" id="mediaGrid">
+                <div class="media-card bilibili">
+                    <div class="media-icon">
+                        <i class="fab fa-bilibili"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>哔哩哔哩</h3>
+                        <p class="followers">12.5K 粉丝</p>
+                        <p class="description">Java教程 · 项目实战</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">156 视频</span>
+                        <span class="stat">89.2W 播放</span>
+                    </div>
+                </div>
+                
+                <div class="media-card xiaohongshu">
+                    <div class="media-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>小红书</h3>
+                        <p class="followers">8.3K 粉丝</p>
+                        <p class="description">编程日常 · 技术分享</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">89 笔记</span>
+                        <span class="stat">45.6W 浏览</span>
+                    </div>
+                </div>
+                
+                <div class="media-card wechat">
+                    <div class="media-icon">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>微信公众号</h3>
+                        <p class="followers">15.2K 关注</p>
+                        <p class="description">深度技术文章</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">234 文章</span>
+                        <span class="stat">67.8W 阅读</span>
+                    </div>
+                </div>
+                
+                <div class="media-card weibo">
+                    <div class="media-icon">
+                        <i class="fab fa-weibo"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>微博</h3>
+                        <p class="followers">6.7K 粉丝</p>
+                        <p class="description">技术动态 · 行业观察</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">456 微博</span>
+                        <span class="stat">23.4W 互动</span>
+                    </div>
+                </div>
+                
+                <div class="media-card zhihu">
+                    <div class="media-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>知乎</h3>
+                        <p class="followers">9.8K 关注</p>
+                        <p class="description">技术问答 · 经验分享</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">123 回答</span>
+                        <span class="stat">56.7W 赞同</span>
+                    </div>
+                </div>
+                
+                <div class="media-card juejin">
+                    <div class="media-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>掘金</h3>
+                        <p class="followers">11.4K 关注</p>
+                        <p class="description">前沿技术 · 最佳实践</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">78 文章</span>
+                        <span class="stat">34.5W 阅读</span>
+                    </div>
+                </div>
+                
+                <div class="media-card csdn">
+                    <div class="media-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>CSDN</h3>
+                        <p class="followers">13.6K 粉丝</p>
+                        <p class="description">技术博客 · 解决方案</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">167 博客</span>
+                        <span class="stat">78.9W 访问</span>
+                    </div>
+                </div>
+                
+                <div class="media-card douyin">
+                    <div class="media-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>抖音</h3>
+                        <p class="followers">7.2K 粉丝</p>
+                        <p class="description">编程技巧 · 短视频</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">45 视频</span>
+                        <span class="stat">28.3W 播放</span>
+                    </div>
+                </div>
+                
+                <div class="media-card github">
+                    <div class="media-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>GitHub</h3>
+                        <p class="followers">4.8K 关注</p>
+                        <p class="description">开源项目 · 代码分享</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">89 仓库</span>
+                        <span class="stat">1.2K Stars</span>
+                    </div>
+                </div>
+                
+                <div class="media-card youtube">
+                    <div class="media-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>YouTube</h3>
+                        <p class="followers">3.4K 订阅</p>
+                        <p class="description">国际技术分享</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">23 视频</span>
+                        <span class="stat">15.6W 观看</span>
+                    </div>
+                </div>
+                
+                <div class="media-card tiktok">
+                    <div class="media-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>TikTok</h3>
+                        <p class="followers">2.1K 粉丝</p>
+                        <p class="description">编程趣味内容</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">34 视频</span>
+                        <span class="stat">12.8W 播放</span>
+                    </div>
+                </div>
+                
+                <div class="media-card linkedin">
+                    <div class="media-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="media-info">
+                        <h3>LinkedIn</h3>
+                        <p class="followers">1.8K 连接</p>
+                        <p class="description">职业发展 · 技术见解</p>
+                    </div>
+                    <div class="media-stats">
+                        <span class="stat">56 帖子</span>
+                        <span class="stat">8.9K 互动</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-outline" id="mediaToggle">
+                    <i class="fas fa-chevron-down"></i>
+                    <span>查看全部平台</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="products" class="products-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">我的产品</h2>
+                <p class="section-subtitle">用心打造的Java项目，解决实际业务问题</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>电商管理系统</h3>
+                        <p>基于Spring Boot的完整电商解决方案，包含用户管理、商品管理、订单处理等核心功能。</p>
+                        <div class="tech-stack">
+                            <span class="tech">Spring Boot</span>
+                            <span class="tech">MySQL</span>
+                            <span class="tech">Redis</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-small btn-primary">查看详情</a>
+                        <a href="#" class="btn-small btn-secondary">在线演示</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>项目管理工具</h3>
+                        <p>敏捷开发项目管理平台，支持任务分配、进度跟踪、团队协作等功能。</p>
+                        <div class="tech-stack">
+                            <span class="tech">Spring Cloud</span>
+                            <span class="tech">MongoDB</span>
+                            <span class="tech">RabbitMQ</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-small btn-primary">查看详情</a>
+                        <a href="#" class="btn-small btn-secondary">在线演示</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>数据分析平台</h3>
+                        <p>企业级数据分析和可视化平台，提供实时数据处理和智能报表生成。</p>
+                        <div class="tech-stack">
+                            <span class="tech">Spring Boot</span>
+                            <span class="tech">Elasticsearch</span>
+                            <span class="tech">Kafka</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-small btn-primary">查看详情</a>
+                        <a href="#" class="btn-small btn-secondary">在线演示</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>权限管理系统</h3>
+                        <p>基于RBAC模型的权限管理系统，支持多租户、细粒度权限控制。</p>
+                        <div class="tech-stack">
+                            <span class="tech">Spring Security</span>
+                            <span class="tech">JWT</span>
+                            <span class="tech">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-small btn-primary">查看详情</a>
+                        <a href="#" class="btn-small btn-secondary">在线演示</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>即时通讯系统</h3>
+                        <p>基于WebSocket的实时通讯系统，支持私聊、群聊、文件传输等功能。</p>
+                        <div class="tech-stack">
+                            <span class="tech">WebSocket</span>
+                            <span class="tech">Netty</span>
+                            <span class="tech">Redis</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-small btn-primary">查看详情</a>
+                        <a href="#" class="btn-small btn-secondary">在线演示</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>云存储服务</h3>
+                        <p>分布式文件存储系统，支持大文件上传、断点续传、CDN加速等功能。</p>
+                        <div class="tech-stack">
+                            <span class="tech">MinIO</span>
+                            <span class="tech">FastDFS</span>
+                            <span class="tech">Nginx</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-small btn-primary">查看详情</a>
+                        <a href="#" class="btn-small btn-secondary">在线演示</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术小册 -->
+    <section id="courses" class="courses-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">技术小册</h2>
+                <p class="section-subtitle">系统化的技术学习资料，助你快速成长</p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card featured">
+                    <div class="course-badge">热门</div>
+                    <div class="course-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="course-info">
+                        <h3>Java进阶实战指南</h3>
+                        <p>从基础到高级，全面掌握Java开发技能，包含Spring Boot、微服务、性能优化等核心内容。</p>
+                        <div class="course-stats">
+                            <span><i class="fas fa-users"></i> 2.3K 学员</span>
+                            <span><i class="fas fa-star"></i> 4.9 评分</span>
+                            <span><i class="fas fa-clock"></i> 12 小时</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="original-price">¥199</span>
+                            <span class="current-price">¥99</span>
+                        </div>
+                    </div>
+                    <a href="#" class="course-btn">立即学习</a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="course-info">
+                        <h3>MySQL性能优化实战</h3>
+                        <p>深入理解MySQL原理，掌握索引优化、查询优化、架构设计等核心技能。</p>
+                        <div class="course-stats">
+                            <span><i class="fas fa-users"></i> 1.8K 学员</span>
+                            <span><i class="fas fa-star"></i> 4.8 评分</span>
+                            <span><i class="fas fa-clock"></i> 8 小时</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="current-price">¥79</span>
+                        </div>
+                    </div>
+                    <a href="#" class="course-btn">立即学习</a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="course-info">
+                        <h3>微服务架构设计</h3>
+                        <p>从单体到微服务的演进之路，掌握Spring Cloud生态和分布式系统设计。</p>
+                        <div class="course-stats">
+                            <span><i class="fas fa-users"></i> 1.5K 学员</span>
+                            <span><i class="fas fa-star"></i> 4.7 评分</span>
+                            <span><i class="fas fa-clock"></i> 15 小时</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="current-price">¥129</span>
+                        </div>
+                    </div>
+                    <a href="#" class="course-btn">立即学习</a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="course-info">
+                        <h3>Docker容器化实践</h3>
+                        <p>掌握Docker容器技术，学会应用容器化部署和Kubernetes集群管理。</p>
+                        <div class="course-stats">
+                            <span><i class="fas fa-users"></i> 1.2K 学员</span>
+                            <span><i class="fas fa-star"></i> 4.6 评分</span>
+                            <span><i class="fas fa-clock"></i> 10 小时</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="current-price">¥89</span>
+                        </div>
+                    </div>
+                    <a href="#" class="course-btn">立即学习</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 源码分享 -->
+    <section id="source" class="source-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">源码分享</h2>
+                <p class="section-subtitle">精选优质源码，学习最佳实践</p>
+            </div>
+            
+            <div class="source-grid">
+                <div class="source-card">
+                    <div class="source-header">
+                        <div class="source-icon">
+                            <i class="fab fa-spring"></i>
+                        </div>
+                        <div class="source-meta">
+                            <h3>Spring Boot 脚手架</h3>
+                            <p>企业级开发脚手架</p>
+                        </div>
+                        <div class="source-stats">
+                            <span><i class="fas fa-star"></i> 234</span>
+                            <span><i class="fas fa-code-branch"></i> 89</span>
+                        </div>
+                    </div>
+                    <div class="source-description">
+                        <p>集成了常用组件的Spring Boot项目模板，包含权限管理、日志记录、异常处理等基础功能。</p>
+                    </div>
+                    <div class="source-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MyBatis Plus</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <div class="source-actions">
+                        <a href="#" class="btn-small btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="source-card">
+                    <div class="source-header">
+                        <div class="source-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="source-meta">
+                            <h3>电商系统源码</h3>
+                            <p>完整的电商解决方案</p>
+                        </div>
+                        <div class="source-stats">
+                            <span><i class="fas fa-star"></i> 456</span>
+                            <span><i class="fas fa-code-branch"></i> 123</span>
+                        </div>
+                    </div>
+                    <div class="source-description">
+                        <p>包含前台商城、后台管理、支付系统的完整电商项目，支持多商户模式。</p>
+                    </div>
+                    <div class="source-tech">
+                        <span class="tech-tag">Spring Cloud</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="source-actions">
+                        <a href="#" class="btn-small btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="source-card">
+                    <div class="source-header">
+                        <div class="source-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="source-meta">
+                            <h3>数据可视化平台</h3>
+                            <p>大数据分析展示</p>
+                        </div>
+                        <div class="source-stats">
+                            <span><i class="fas fa-star"></i> 189</span>
+                            <span><i class="fas fa-code-branch"></i> 67</span>
+                        </div>
+                    </div>
+                    <div class="source-description">
+                        <p>基于ECharts的数据可视化平台，支持多种图表类型和实时数据更新。</p>
+                    </div>
+                    <div class="source-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">ECharts</span>
+                        <span class="tech-tag">WebSocket</span>
+                    </div>
+                    <div class="source-actions">
+                        <a href="#" class="btn-small btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 开源项目 -->
+    <section id="opensource" class="opensource-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">开源项目</h2>
+                <p class="section-subtitle">回馈社区，分享技术成果</p>
+            </div>
+            
+            <div class="opensource-grid">
+                <div class="opensource-card">
+                    <div class="opensource-header">
+                        <h3>Java工具库</h3>
+                        <div class="opensource-stats">
+                            <span><i class="fas fa-star"></i> 1.2K</span>
+                            <span><i class="fas fa-code-branch"></i> 234</span>
+                        </div>
+                    </div>
+                    <p>常用Java工具类集合，提高开发效率</p>
+                    <div class="opensource-tech">
+                        <span>Java</span>
+                        <span>Maven</span>
+                    </div>
+                    <a href="#" class="opensource-link">
+                        <i class="fab fa-github"></i> 查看项目
+                    </a>
+                </div>
+                
+                <div class="opensource-card">
+                    <div class="opensource-header">
+                        <h3>Redis缓存框架</h3>
+                        <div class="opensource-stats">
+                            <span><i class="fas fa-star"></i> 856</span>
+                            <span><i class="fas fa-code-branch"></i> 167</span>
+                        </div>
+                    </div>
+                    <p>简化Redis操作的轻量级框架</p>
+                    <div class="opensource-tech">
+                        <span>Java</span>
+                        <span>Redis</span>
+                    </div>
+                    <a href="#" class="opensource-link">
+                        <i class="fab fa-github"></i> 查看项目
+                    </a>
+                </div>
+                
+                <div class="opensource-card">
+                    <div class="opensource-header">
+                        <h3>API文档生成器</h3>
+                        <div class="opensource-stats">
+                            <span><i class="fas fa-star"></i> 645</span>
+                            <span><i class="fas fa-code-branch"></i> 89</span>
+                        </div>
+                    </div>
+                    <p>自动生成美观的API文档</p>
+                    <div class="opensource-tech">
+                        <span>Java</span>
+                        <span>Swagger</span>
+                    </div>
+                    <a href="#" class="opensource-link">
+                        <i class="fab fa-github"></i> 查看项目
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术文章 -->
+    <section id="articles" class="articles-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">技术文章</h2>
+                <p class="section-subtitle">按分类浏览文章，点击标题阅读详情</p>
+            </div>
+            
+            <div class="article-categories-grid">
+                <div class="category-card java-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Java开发</h3>
+                            <p>Java编程、Spring框架、企业级开发</p>
+                        </div>
+                    </div>
+                    <div class="category-articles">
+                        <div class="article-item" onclick="window.open('article.html?id=1', '_blank')">
+                            <h4>Spring Boot 3.0 新特性深度解析</h4>
+                            <div class="article-meta">
+                                <span><i class="fas fa-eye"></i> 1.25K</span>
+                                <span><i class="fas fa-heart"></i> 89</span>
+                                <span>2024-01-15</span>
+                            </div>
+                        </div>
+                        <div class="article-item" onclick="window.open('article.html?id=5', '_blank')">
+                            <h4>Java 17 性能提升详解</h4>
+                            <div class="article-meta">
+                                <span><i class="fas fa-eye"></i> 1.12K</span>
+                                <span><i class="fas fa-heart"></i> 78</span>
+                                <span>2024-01-05</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card database-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>数据库技术</h3>
+                            <p>MySQL、Redis、MongoDB数据库优化</p>
+                        </div>
+                    </div>
+                    <div class="category-articles">
+                        <div class="article-item" onclick="window.open('article.html?id=2', '_blank')">
+                            <h4>MySQL性能优化指南</h4>
+                            <div class="article-meta">
+                                <span><i class="fas fa-eye"></i> 980</span>
+                                <span><i class="fas fa-heart"></i> 67</span>
+                                <span>2024-01-12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card microservice-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>微服务架构</h3>
+                            <p>微服务架构、Spring Cloud、分布式系统</p>
+                        </div>
+                    </div>
+                    <div class="category-articles">
+                        <div class="article-item" onclick="window.open('article.html?id=3', '_blank')">
+                            <h4>微服务架构设计模式</h4>
+                            <div class="article-meta">
+                                <span><i class="fas fa-eye"></i> 1.56K</span>
+                                <span><i class="fas fa-heart"></i> 124</span>
+                                <span>2024-01-10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card devops-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>DevOps & 云原生</h3>
+                            <p>Docker、Kubernetes、CI/CD、云部署</p>
+                        </div>
+                    </div>
+                    <div class="category-articles">
+                        <div class="article-item" onclick="window.open('article.html?id=4', '_blank')">
+                            <h4>Docker容器最佳实践</h4>
+                            <div class="article-meta">
+                                <span><i class="fas fa-eye"></i> 890</span>
+                                <span><i class="fas fa-heart"></i> 56</span>
+                                <span>2024-01-08</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card architecture-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>架构设计</h3>
+                            <p>系统架构、设计模式、最佳实践</p>
+                        </div>
+                    </div>
+                    <div class="category-articles">
+                        <div class="article-item" onclick="window.open('article.html?id=6', '_blank')">
+                            <h4>Spring Boot中的整洁架构</h4>
+                            <div class="article-meta">
+                                <span><i class="fas fa-eye"></i> 750</span>
+                                <span><i class="fas fa-heart"></i> 45</span>
+                                <span>2024-01-03</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card performance-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>性能优化</h3>
+                            <p>应用性能调优和优化</p>
+                        </div>
+                    </div>
+                    <div class="category-articles">
+                        <div class="article-item">
+                            <h4>更多性能优化文章即将发布...</h4>
+                            <div class="article-meta">
+                                <span><i class="fas fa-clock"></i> 敬请期待</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="articles-more">
+                <a href="articles.html" class="btn btn-outline">查看更多文章</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术群聊 -->
+    <section id="groups" class="groups-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">技术群聊</h2>
+                <p class="section-subtitle">加入技术社群，一起学习成长</p>
+            </div>
+            
+            <div class="groups-grid">
+                <div class="group-card java-group">
+                    <div class="group-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3>Java技术交流群</h3>
+                        <p>Java开发者聚集地，分享技术心得</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 2.3K 成员</span>
+                            <span><i class="fas fa-comments"></i> 活跃度高</span>
+                        </div>
+                    </div>
+                    <a href="#" class="group-join">加入群聊</a>
+                </div>
+                
+                <div class="group-card spring-group">
+                    <div class="group-icon">
+                        <i class="fab fa-spring"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3>Spring生态圈</h3>
+                        <p>Spring框架学习与实践交流</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 1.8K 成员</span>
+                            <span><i class="fas fa-comments"></i> 每日活跃</span>
+                        </div>
+                    </div>
+                    <a href="#" class="group-join">加入群聊</a>
+                </div>
+                
+                <div class="group-card microservice-group">
+                    <div class="group-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3>微服务架构群</h3>
+                        <p>微服务设计与实践经验分享</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 1.5K 成员</span>
+                            <span><i class="fas fa-comments"></i> 专业讨论</span>
+                        </div>
+                    </div>
+                    <a href="#" class="group-join">加入群聊</a>
+                </div>
+                
+                <div class="group-card database-group">
+                    <div class="group-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3>数据库优化群</h3>
+                        <p>数据库设计与性能优化交流</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 1.2K 成员</span>
+                            <span><i class="fas fa-comments"></i> 技术深度</span>
+                        </div>
+                    </div>
+                    <a href="#" class="group-join">加入群聊</a>
+                </div>
+                
+                <div class="group-card devops-group">
+                    <div class="group-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3>DevOps实践群</h3>
+                        <p>持续集成与部署经验分享</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 956 成员</span>
+                            <span><i class="fas fa-comments"></i> 实战导向</span>
+                        </div>
+                    </div>
+                    <a href="#" class="group-join">加入群聊</a>
+                </div>
+                
+                <div class="group-card career-group">
+                    <div class="group-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3>程序员职场群</h3>
+                        <p>职业发展与面试经验交流</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 2.1K 成员</span>
+                            <span><i class="fas fa-comments"></i> 互助成长</span>
+                        </div>
+                    </div>
+                    <a href="#" class="group-join">加入群聊</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">联系我</h2>
+                <p class="section-subtitle">有项目合作或技术交流，欢迎联系</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>邮箱</h4>
+                            <p>dada@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>微信</h4>
+                            <p>dada_java_dev</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p>github.com/dada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>位置</h4>
+                            <p>中国 · 北京</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="您的邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="项目预算">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="项目描述或合作需求" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>发送消息</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <div class="logo-avatar">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span>哒哒</span>
+                    </div>
+                    <p>专注Java开发，用技术创造价值</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>快速链接</h4>
+                        <ul>
+                            <li><a href="#home">首页</a></li>
+                            <li><a href="#products">产品</a></li>
+                            <li><a href="#articles">文章</a></li>
+                            <li><a href="#contact">联系</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>技术栈</h4>
+                        <ul>
+                            <li>Java & Spring</li>
+                            <li>MySQL & Redis</li>
+                            <li>Docker & K8s</li>
+                            <li>微服务架构</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>社交媒体</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-weixin"></i></a>
+                            <a href="#"><i class="fab fa-weibo"></i></a>
+                            <a href="#"><i class="fab fa-bilibili"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 哒哒. All rights reserved. | 用心编码，创造未来</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

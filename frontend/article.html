@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章详情 - 哒哒的技术博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="css/article-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-avatar">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">哒哒</span>
+                    <span class="logo-subtitle">Java Developer</span>
+                </div>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="articles.html" class="nav-item active">
+                    <i class="fas fa-pen"></i>
+                    <span>文章</span>
+                </a>
+                <a href="index.html#contact" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>联系</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="articles.html" class="nav-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>返回文章</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main class="article-main">
+        <!-- Article Header -->
+        <section class="article-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="articles.html">文章</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="articleCategory">Java开发</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>当前文章</span>
+                </div>
+                
+                <div class="article-hero">
+                    <div class="article-meta">
+                        <span class="category-tag" id="categoryTag">Java开发</span>
+                        <span class="publish-date" id="publishDate">2024-01-15</span>
+                        <span class="read-time" id="readTime">8 分钟阅读</span>
+                    </div>
+                    
+                    <h1 class="article-title" id="articleTitle">
+                        Spring Boot 3.0 新特性详解
+                    </h1>
+                    
+                    <div class="article-summary" id="articleSummary">
+                        深入解析 Spring Boot 3.0 的核心新特性，包括原生镜像支持、可观测性增强、性能优化等重要更新。
+                    </div>
+                    
+                    <div class="article-stats">
+                        <div class="stats-left">
+                            <span><i class="fas fa-eye"></i> <span id="viewCount">1,250</span> 阅读</span>
+                            <span><i class="fas fa-heart"></i> <span id="likeCount">89</span> 点赞</span>
+                            <span><i class="fas fa-comment"></i> <span id="commentCount">23</span> 评论</span>
+                        </div>
+                        <div class="stats-right">
+                            <button class="action-btn like-btn" id="likeBtn">
+                                <i class="fas fa-heart"></i>
+                                <span>点赞</span>
+                            </button>
+                            <button class="action-btn share-btn" id="shareBtn">
+                                <i class="fas fa-share"></i>
+                                <span>分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Body -->
+        <section class="article-body">
+            <div class="container">
+                <div class="article-layout">
+                    <!-- Table of Contents -->
+                    <aside class="article-toc">
+                        <div class="toc-container">
+                            <h3>目录</h3>
+                            <ul class="toc-list" id="tocList">
+                                <li><a href="#introduction">1. 简介</a></li>
+                                <li><a href="#new-features">2. 核心新特性</a></li>
+                                <li><a href="#native-image">3. 原生镜像支持</a></li>
+                                <li><a href="#observability">4. 可观测性增强</a></li>
+                                <li><a href="#performance">5. 性能优化</a></li>
+                                <li><a href="#migration">6. 迁移指南</a></li>
+                                <li><a href="#conclusion">7. 总结</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <!-- Article Content -->
+                    <article class="article-content" id="articleContent">
+                        <div class="content-loading">
+                            <div class="spinner"></div>
+                            <p>正在加载文章内容...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Footer -->
+        <section class="article-footer">
+            <div class="container">
+                <!-- Tags -->
+                <div class="article-tags">
+                    <h3>相关标签</h3>
+                    <div class="tags-list" id="tagsList">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">微服务</span>
+                        <span class="tag">性能优化</span>
+                    </div>
+                </div>
+
+                <!-- Author Info -->
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='90' fill='url(%23grad1)'/%3E%3Ctext x='100' y='120' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E哒%3C/text%3E%3C/svg%3E" alt="作者头像">
+                    </div>
+                    <div class="author-details">
+                        <h4>哒哒</h4>
+                        <p>Java开发工程师，专注于Spring生态和微服务架构，热爱技术分享。</p>
+                        <div class="author-stats">
+                            <span>发表文章 <strong>156</strong> 篇</span>
+                            <span>获得点赞 <strong>12.5K</strong> 个</span>
+                            <span>粉丝 <strong>8.9K</strong> 人</span>
+                        </div>
+                    </div>
+                    <div class="author-actions">
+                        <button class="follow-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>关注</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="related-articles">
+                    <h3>相关文章</h3>
+                    <div class="related-grid" id="relatedGrid">
+                        <!-- Related articles will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <div class="comments-header">
+                <h3>评论 (<span id="commentsCount">23</span>)</h3>
+                <div class="comments-sort">
+                    <select id="sortComments">
+                        <option value="latest">最新</option>
+                        <option value="oldest">最早</option>
+                        <option value="popular">最热</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+                <div class="comment-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="comment-input">
+                    <textarea placeholder="写下你的评论..." id="commentText"></textarea>
+                    <div class="comment-actions">
+                        <button class="comment-btn" id="submitComment">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>发表评论</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list" id="commentsList">
+                <!-- Comments will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="js/article-detail.js"></script>
+</body>
+</html>

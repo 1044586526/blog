@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术文章 - 哒哒</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-avatar">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">哒哒</span>
+                    <span class="logo-subtitle">Java Developer</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="./index.html" class="nav-item" onclick="window.location.href='./index.html'; return false;">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="./articles.html" class="nav-item active">
+                    <i class="fas fa-pen"></i>
+                    <span>文章</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="./index.html#contact" class="nav-btn" onclick="window.location.href='./index.html#contact'; return false;">
+                    <i class="fas fa-envelope"></i>
+                    <span>联系我</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文章页面主体 -->
+    <main class="articles-main">
+        <!-- 页面头部 -->
+        <section class="articles-hero">
+            <div class="hero-container">
+                <h1 class="hero-title">技术文章</h1>
+                <p class="hero-subtitle">分享技术心得，记录成长历程</p>
+                
+                <!-- 搜索框 -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="搜索文章标题或内容...">
+                        <button id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文章分类 -->
+        <section class="categories-section">
+            <div class="section-container">
+                <div class="categories-grid" id="categoriesGrid">
+                    <!-- 分类卡片将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 精选文章 -->
+        <section class="featured-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">精选文章</h2>
+                    <p class="section-subtitle">推荐阅读的优质技术文章</p>
+                </div>
+                
+                <div class="featured-grid" id="featuredGrid">
+                    <!-- 精选文章将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <div class="logo-avatar">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span>哒哒</span>
+                    </div>
+                    <p>专注Java开发，用技术创造价值</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>快速链接</h4>
+                        <ul>
+                            <li><a href="./index.html" onclick="window.location.href='./index.html'; return false;">首页</a></li>
+                            <li><a href="./articles.html">文章</a></li>
+                            <li><a href="./index.html#contact" onclick="window.location.href='./index.html#contact'; return false;">联系</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>技术栈</h4>
+                        <ul>
+                            <li>Java & Spring</li>
+                            <li>MySQL & Redis</li>
+                            <li>Docker & K8s</li>
+                            <li>微服务架构</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>社交媒体</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-weixin"></i></a>
+                            <a href="#"><i class="fab fa-weibo"></i></a>
+                            <a href="#"><i class="fab fa-bilibili"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 哒哒. All rights reserved. | 用心编码，创造未来</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/articles.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+package tech.yicode.portfolio.entity;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Entity
+@Table(name = "article_categories")
+public class ArticleCategory {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Column(nullable = false, length = 100)
+    private String name;
+    
+    @Column(nullable = false, unique = true, length = 100)
+    private String slug;
+    
+    @Column(columnDefinition = "TEXT")
+    private String description;
+    
+    @Column(name = "icon_class", length = 50)
+    private String iconClass;
+    
+    @Column(length = 20)
+    private String color;
+    
+    @Column(name = "display_order")
+    private Integer displayOrder = 0;
+    
+    @Column(name = "is_active")
+    private Boolean isActive = true;
+    
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+    
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+    
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    private List<Article> articles;
+    
+    // Constructors
+    public ArticleCategory() {}
+    
+    public ArticleCategory(String name, String slug, String description, String iconClass, String color) {
+        this.name = name;
+        this.slug = slug;
+        this.description = description;
+        this.iconClass = iconClass;
+        this.color = color;
+    }
+    
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+    }
+    
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
+    
+    // Getters and Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    
+    public String getSlug() { return slug; }
+    public void setSlug(String slug) { this.slug = slug; }
+    
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+    
+    public String getIconClass() { return iconClass; }
+    public void setIconClass(String iconClass) { this.iconClass = iconClass; }
+    
+    public String getColor() { return color; }
+    public void setColor(String color) { this.color = color; }
+    
+    public Integer getDisplayOrder() { return displayOrder; }
+    public void setDisplayOrder(Integer displayOrder) { this.displayOrder = displayOrder; }
+    
+    public Boolean getIsActive() { return isActive; }
+    public void setIsActive(Boolean isActive) { this.isActive = isActive; }
+    
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+    
+    public List<Article> getArticles() { return articles; }
+    public void setArticles(List<Article> articles) { this.articles = articles; }
+}
