@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS articles (
     content LONGTEXT NOT NULL COMMENT '文章内容(Markdown格式)',
     cover_image VARCHAR(500) COMMENT '封面图片URL',
     category_id BIGINT NOT NULL COMMENT '分类ID',
-    author VARCHAR(100) DEFAULT '哒哒' COMMENT '作者',
+    author VARCHAR(100) DEFAULT '刘白' COMMENT '作者',
     view_count INT DEFAULT 0 COMMENT '浏览次数',
     like_count INT DEFAULT 0 COMMENT '点赞次数',
     comment_count INT DEFAULT 0 COMMENT '评论次数',

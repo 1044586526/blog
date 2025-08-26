@@ -1,4 +1,4 @@
-// 现代化JavaScript - 哒哒的个人网站
+// 现代化JavaScript - 刘白的个人网站
 
 // DOM元素
 const themeToggle = document.getElementById('themeToggle');
@@ -99,7 +99,9 @@ function initCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number[data-count]');
     
     const animateCounter = (counter) => {
-        const target = parseInt(counter.getAttribute('data-count'));
+        const dataCount = counter.getAttribute('data-count');
+        const hasPlus = dataCount.includes('+');
+        const target = parseInt(dataCount.replace(/[^\d]/g, ''));
         const duration = 2000; // 2秒
         const step = target / (duration / 16); // 60fps
         let current = 0;
@@ -107,10 +109,12 @@ function initCounterAnimation() {
         const updateCounter = () => {
             current += step;
             if (current < target) {
-                counter.textContent = Math.floor(current).toLocaleString();
+                const displayValue = Math.floor(current).toLocaleString();
+                counter.textContent = hasPlus ? displayValue + '+' : displayValue;
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target.toLocaleString();
+                const finalValue = target.toLocaleString();
+                counter.textContent = hasPlus ? finalValue + '+' : finalValue;
             }
         };
         

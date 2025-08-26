@@ -32,7 +32,7 @@ public class Article {
     private ArticleCategory category;
     
     @Column(length = 100)
-    private String author = "哒哒";
+    private String author = "刘白";
     
     @Column(name = "view_count")
     private Integer viewCount = 0;

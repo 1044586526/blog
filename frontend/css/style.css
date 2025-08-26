@@ -1,4 +1,4 @@
-/* 现代渐变风格CSS - 哒哒的个人网站 */
+/* 现代渐变风格CSS - 刘白的个人网站 */
 
 /* CSS变量定义 */
 :root {
@@ -58,7 +58,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-family: "Microsoft YaHei", "微软雅黑", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
@@ -97,6 +97,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    text-decoration: none;
 }
 
 .logo-avatar {
@@ -110,6 +111,14 @@ body {
     font-size: 1.5rem;
     color: white;
     box-shadow: var(--shadow-light);
+    overflow: hidden;
+}
+
+.logo-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .logo-text {
@@ -122,6 +131,7 @@ body {
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1.2;
+    text-decoration: none;
 }
 
 .logo-subtitle {
@@ -129,6 +139,7 @@ body {
     color: var(--text-secondary);
     font-weight: 400;
     letter-spacing: 0.5px;
+    text-decoration: none;
 }
 
 .nav-menu {
@@ -276,6 +287,7 @@ body {
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
     animation: pulse 3s ease-in-out infinite;
+    margin: 0 auto;
 }
 
 @keyframes pulse {
@@ -287,6 +299,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .hero-title {
@@ -1785,6 +1798,35 @@ section {
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
+}
+
+/* 作者头像样式 */
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 页脚头像样式 */
+.footer-logo .logo-avatar {
+    width: 45px;
+    height: 45px;
+}
+
+.footer-logo .logo-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* 返回顶部按钮 */
